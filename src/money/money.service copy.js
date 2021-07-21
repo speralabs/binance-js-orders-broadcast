@@ -19,7 +19,6 @@ const {
   TYPE_SHORT,
   TYPE_STOP_LOSS,
 } = require('../../config/constants');
-const { create } = require('jimp');
 
 /**
  * GET all data set
