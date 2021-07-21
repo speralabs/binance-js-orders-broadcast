@@ -22,7 +22,6 @@
     "express-session": "^1.15.6",
     "formidable": "^1.2.2",
     "http": "0.0.0",
-    "jimp": "^0.16.1",
     "joi": "^14.0.4",
     "jsonwebtoken": "^8.3.0",
     "make-dir": "^3.1.0",
@@ -30,7 +29,6 @@
     "node-binance-api": "^0.12.5",
     "nodemailer": "^4.7.0",
     "request": "^2.88.0",
-    "sharp": "^0.22.1",
     "shortid": "^2.2.15",
     "uniqid": "^5.2.0",
     "uuid": "^8.3.0"

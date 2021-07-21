@@ -18,7 +18,4 @@ router.use('/users', require('../src/users/users.router'));
 // set card routes
 router.use('/currency', require('../src/money/money.router'));
 
-// set image routes
-router.use('/files', require('../src/file-uploader/files.router'));
-
 module.exports = router;
