@@ -18,6 +18,7 @@ const {
   TYPE_STOP_MARKET,
   TYPE_SHORT,
   TYPE_STOP_LOSS,
+  TYPE_FLAT,
 } = require('../../config/constants');
 
 /**
@@ -166,7 +167,7 @@ module.exports.startOperation = async (
       await binance.futuresLeverage(symbol, leverage);
 
       //If received order type is LONG
-      if (position_side == TYPE_LONG) {
+      if ((position_side == TYPE_LONG) && (trade_type == TYPE_BUY)) {
         let pos_check = true;
 
         //Get all open positions and check if there are any open long positions for given symbol
@@ -221,7 +222,7 @@ module.exports.startOperation = async (
         }
       }
 
-      if (position_side == TYPE_SHORT) {
+      if ((position_side == TYPE_SHORT) && (trade_type == TYPE_SELL)) {
         let pos_check = true;
 
         //Get all open positions and check if there are any open long positions for given symbol
