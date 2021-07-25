@@ -3,6 +3,7 @@ module.exports.TYPE_LONG = 'LONG';
 module.exports.TYPE_MARKET = 'MARKET';
 module.exports.TYPE_BUY = 'BUY';
 module.exports.TYPE_SELL = 'SELL';
+module.exports.TYPE_FLAT = 'FLAT';
 module.exports.TYPE_BINANCE = 'BINANCE';
 module.exports.TYPE_TRAILING_STOP_MARKET = 'TRAILING_STOP_MARKET';
 module.exports.TYPE_LIMIT = 'LIMIT';

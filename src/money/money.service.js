@@ -166,7 +166,7 @@ module.exports.startOperation = async (
       await binance.futuresLeverage(symbol, leverage);
 
       //If received order type is LONG
-      if ((position_side == TYPE_LONG) && (trade_type == TYPE_BUY)) {
+      if (position_side == TYPE_LONG) {
         let pos_check = true;
 
         //Get all open positions and check if there are any open long positions for given symbol
@@ -221,7 +221,7 @@ module.exports.startOperation = async (
         }
       }
 
-      if ((position_side == TYPE_SHORT) && (trade_type == TYPE_BUY)) {
+      if (position_side == TYPE_SHORT) {
         let pos_check = true;
 
         //Get all open positions and check if there are any open long positions for given symbol
@@ -278,7 +278,7 @@ module.exports.startOperation = async (
       }
 
 
-      if (trade_type == TYPE_SELL) {
+      if (position_side == TYPE_FLAT) {
 
          //Set position check variable false if there are open trades for same symbol or no of trades reached user defined limit
          account_details.positions.forEach(async(position) => {
